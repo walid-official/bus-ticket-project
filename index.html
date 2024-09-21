@@ -1,117 +1,410 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dublin Bus Ticket</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-              }
-            }
-          }
-        }
-      </script>
-</head>
-<body>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body>
     <header class="header-area w-full">
-        <div class="w-11/12 mx-auto">
-             <!-- Navbar Section Start -->
-            <div class="navbar bg-base-100 py-6">
-                <div class="navbar-start">
-                  <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M4 6h16M4 12h8m-8 6h16" />
-                      </svg>
-                    </div>
-                    <ul
-                      tabindex="0"
-                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                      
-                        <li><a>Home</a></li>
-                        <li><a href="">About Us</a></li>
-                        <li><a>Destination</a></li>
-                        <li><a>Search</a></li>
-                        <li><a>Contact Us</a></li>
-                    
-                    </ul>
-                  </div>
-                  <a class="btn btn-ghost text-xl"><img src="images/logo.jpg" class="max-w-32"></a>
-                </div>
-                <div class="navbar-center hidden lg:flex">
-                  <ul class="menu menu-horizontal px-1">
-                    <li><a>Home</a></li>
-                    <li><a href="">About Us</a></li>
-                    <li><a>Destination</a></li>
-                    <li><a>Search</a></li>
-                    <li><a>Contact Us</a></li>
-                  </ul>
-                </div>
-                <div class="navbar-end">
-                  <a class="btn"><i class="fa-solid fa-bars"></i></a>
-                </div>
+      <div class="w-[95%] mx-auto">
+        <!-- Navbar Section Start -->
+        <div class="navbar bg-base-100 py-6">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              >
+                <li><a>Home</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a>Destination</a></li>
+                <li><a>Search</a></li>
+                <li><a>Contact Us</a></li>
+              </ul>
             </div>
-            <!-- Navbar Section End -->
-            <!-- Banner Section Start -->
-            <div class="carousel w-full">
-                <div id="slide1" class="carousel-item relative w-full">
-                    <div class="bg-[url('images/banner.png')] w-full bg-center bg-cover bg-no-repeat py-20">
-                      <div class="flex justify-center items-center h-[100%]">
-                        <div class="text-center">
-                            <h1 class="font-bold text-white text-6xl">End-to-End Travel with <br><span class="text-[#1dd100]">Dublin bus</span></h1>
-                            <p class="w-11/12 mx-auto py-3 text-white text-xl">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
-                            <button class="btn text-white bg-[#1dd100] hover:text-[#1dd100] border-none">Buy Tickets</button>
-                        </div>
-                      </div>
-                        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                            <a href="#slide4" class="btn btn-circle">❮</a>
-                            <a href="#slide2" class="btn btn-circle">❯</a>
-                        </div>
-                    </div>
-                </div>
-                <div id="slide2" class="carousel-item relative w-full">
-                    <div class="bg-[url('images/banner.png')] w-full bg-center bg-cover bg-no-repeat py-80">
-                        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                            <a href="#slide1" class="btn btn-circle">❮</a>
-                            <a href="#slide3" class="btn btn-circle">❯</a>
-                        </div>
-                    </div>
-                </div>
-                <div id="slide3" class="carousel-item relative w-full">
-                    <div class="bg-[url('images/banner.png')] w-full bg-center bg-cover bg-no-repeat py-80">
-                        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                            <a href="#slide2" class="btn btn-circle">❮</a>
-                            <a href="#slide4" class="btn btn-circle">❯</a>
-                        </div>
-                    </div>
-                </div>
-                <div id="slide4" class="carousel-item relative w-full">
-                    <div class="bg-[url('images/banner.png')] w-full  bg-center bg-cover bg-no-repeat py-80">
-                        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                            <a href="#slide3" class="btn btn-circle">❮</a>
-                            <a href="#slide1" class="btn btn-circle">❯</a>
-                        </div>
-                    </div>
+            <a class="btn btn-ghost text-xl"
+              ><img src="images/logo.jpg" class="max-w-32"
+            /></a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a>Home</a></li>
+              <li><a href="">About Us</a></li>
+              <li><a>Destination</a></li>
+              <li><a>Search</a></li>
+              <li><a>Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <a class="btn"><i class="fa-solid fa-bars"></i></a>
+          </div>
+        </div>
+        <!-- Navbar Section End -->
+        <!-- Banner Section Start -->
+        <div class="carousel w-full">
+          <div id="slide1" class="carousel-item relative w-full">
+            <div
+              class="bg-[url('images/banner.png')] w-full bg-center bg-cover bg-no-repeat py-20"
+            >
+              <div class="flex justify-center items-center h-[100%]">
+                <div class="text-center">
+                  <h1 class="font-bold text-white text-6xl">
+                    End-to-End Travel with <br /><span class="text-[#1dd100]"
+                      >Dublin bus</span
+                    >
+                  </h1>
+                  <p class="w-11/12 mx-auto py-3 text-white text-xl">
+                    Yes, you can run unit tests and view the results directly
+                    within the app. The integrated testing features allow for a
+                    streamlined .
+                  </p>
+                  <button
+                    class="btn text-white bg-[#1dd100] hover:text-[#1dd100] border-none"
+                  >
+                    Buy Tickets
+                  </button>
                 </div>
               </div>
-            <!-- Banner Section End -->
+              <div
+                class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+              >
+                <a href="#slide4" class="btn btn-circle">❮</a>
+                <a href="#slide2" class="btn btn-circle">❯</a>
+              </div>
+            </div>
+          </div>
+          <div id="slide2" class="carousel-item relative w-full">
+            <div
+              class="bg-[url('images/banner.png')] w-full bg-center bg-cover bg-no-repeat py-80"
+            >
+              <div
+                class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+              >
+                <a href="#slide1" class="btn btn-circle">❮</a>
+                <a href="#slide3" class="btn btn-circle">❯</a>
+              </div>
+            </div>
+          </div>
+          <div id="slide3" class="carousel-item relative w-full">
+            <div
+              class="bg-[url('images/banner.png')] w-full bg-center bg-cover bg-no-repeat py-80"
+            >
+              <div
+                class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+              >
+                <a href="#slide2" class="btn btn-circle">❮</a>
+                <a href="#slide4" class="btn btn-circle">❯</a>
+              </div>
+            </div>
+          </div>
+          <div id="slide4" class="carousel-item relative w-full">
+            <div
+              class="bg-[url('images/banner.png')] w-full bg-center bg-cover bg-no-repeat py-80"
+            >
+              <div
+                class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+              >
+                <a href="#slide3" class="btn btn-circle">❮</a>
+                <a href="#slide1" class="btn btn-circle">❯</a>
+              </div>
+            </div>
+          </div>
         </div>
+        <!-- Banner Section End -->
+      </div>
     </header>
-</body>
+    <!-- Header Section End -->
+
+    <main class="w-[95%] mx-auto">
+      <div class="text-center py-10">
+        <h2 class="font-bold text-5xl">Dublin Ticket Counter</h2>
+        <p class="">
+          Yes, you can run unit tests and view the results directly within the
+          app. The integrated testing features allow for a streamlined .
+        </p>
+      </div>
+      <section class="flex">
+        <div class="bg-red-300 w-[60%]">
+          <div class="max-w-[100%]">
+            <h2>Select Your Seat</h2>
+            <div class="flex justify-between border border-dashed">
+              <div class="flex">
+                <img src="images/seat-gray.png" alt="" />
+                <span>Available</span>
+              </div>
+              <div class="flex">
+                <img src="images/seat-green-filled.png" alt="" />
+                <span>Selected</span>
+              </div>
+            </div>
+          </div>
+          <!-- Row driver -->
+          <div class="grid grid-cols-12 px-10 my-4">
+            <div class=""></div>
+            <div class=""></div>
+            <div class="col-span-1"></div>
+            <div class=""></div>
+            <div class="col-span-4"></div>
+            <div class=""></div>
+            <div class="col-span-1"></div>
+            <div class="">
+              <button class="btn px-[22px]">Driver</button>
+            </div>
+          </div>
+          <!-- Row 1 -->
+          <div class="grid grid-cols-12 px-10 my-4">
+            <div class="">
+              <p>A</p>
+            </div>
+            <div class="">
+              <button class="btn px-8">A1</button>
+            </div>
+            <div class="col-span-1"></div>
+            <div class="">
+              <button class="btn px-8">A2</button>
+            </div>
+            <div class="col-span-4"></div>
+            <div class="">
+              <button class="btn px-8">A3</button>
+            </div>
+            <div class="col-span-1"></div>
+            <div class="">
+              <button class="btn px-8">A4</button>
+            </div>
+          </div>
+          <!-- Row 2 -->
+          <div class="grid grid-cols-12 px-10 my-4">
+            <div class="">
+              <p>B</p>
+            </div>
+            <div class="">
+              <button class="btn px-8">B1</button>
+            </div>
+            <div class="col-span-1"></div>
+            <div class="">
+              <button class="btn px-8">B2</button>
+            </div>
+            <div class="col-span-4"></div>
+            <div class="">
+              <button class="btn px-8">B3</button>
+            </div>
+            <div class="col-span-1"></div>
+            <div class="">
+              <button class="btn px-8">B4</button>
+            </div>
+          </div>
+          <!-- Row 3 -->
+          <div class="grid grid-cols-12 px-10 my-4">
+            <div class="">
+              <p>C</p>
+            </div>
+            <div class="">
+              <button class="btn px-8">C1</button>
+            </div>
+            <div class="col-span-1"></div>
+            <div class="">
+              <button class="btn px-8">C2</button>
+            </div>
+            <div class="col-span-4"></div>
+            <div class="">
+              <button class="btn px-8">C3</button>
+            </div>
+            <div class="col-span-1"></div>
+            <div class="">
+              <button class="btn px-8">C4</button>
+            </div>
+          </div>
+          <!-- Row 4 -->
+          <div class="grid grid-cols-12 px-10 my-4">
+            <div class="">
+              <p>D</p>
+            </div>
+            <div class="">
+              <button class="btn px-8">D1</button>
+            </div>
+            <div class="col-span-1"></div>
+            <div class="">
+              <button class="btn px-8">D2</button>
+            </div>
+            <div class="col-span-4"></div>
+            <div class="">
+              <button class="btn px-8">D3</button>
+            </div>
+            <div class="col-span-1"></div>
+            <div class="">
+              <button class="btn px-8">D4</button>
+            </div>
+          </div>
+         <!-- Row 5 -->
+            <div class="grid grid-cols-12 px-10 my-4">
+                <div class="">
+                    <p>E</p>
+                </div>
+                <div class="">
+                    <button class="btn px-8">E1</button>
+                </div>
+                <div class="col-span-1"></div>
+                <div class="">
+                    <button class="btn px-8">E2</button>
+                </div>
+                <div class="col-span-4"></div>
+                <div class="">
+                    <button class="btn px-8">E3</button>
+                </div>
+                <div class="col-span-1"></div>
+                <div class="">
+                    <button class="btn px-8">E4</button>
+                </div>
+            </div>
+            <!-- Row 6 -->
+            <div class="grid grid-cols-12 px-10 my-4">
+            <div class="">
+                <p>F</p>
+            </div>
+            <div class="">
+                <button class="btn px-8">F1</button>
+            </div>
+            <div class="col-span-1"></div>
+            <div class="">
+                <button class="btn px-8">F2</button>
+            </div>
+            <div class="col-span-4"></div>
+            <div class="">
+                <button class="btn px-8">F3</button>
+            </div>
+            <div class="col-span-1"></div>
+            <div class="">
+                <button class="btn px-8">F4</button>
+            </div>
+            </div>
+            <!-- Row 7 -->
+            <div class="grid grid-cols-12 px-10 my-4">
+            <div class="">
+                <p>G</p>
+            </div>
+            <div class="">
+                <button class="btn px-8">G1</button>
+            </div>
+            <div class="col-span-1"></div>
+            <div class="">
+                <button class="btn px-8">G2</button>
+            </div>
+            <div class="col-span-4"></div>
+            <div class="">
+                <button class="btn px-8">G3</button>
+            </div>
+            <div class="col-span-1"></div>
+            <div class="">
+                <button class="btn px-8">G4</button>
+            </div>
+            </div>
+            <!-- Row 8 -->
+            <div class="grid grid-cols-12 px-10 my-4">
+                <div class="">
+                <p>H</p>
+                </div>
+                <div class="">
+                <button class="btn px-8">H1</button>
+                </div>
+                <div class="col-span-1"></div>
+                <div class="">
+                <button class="btn px-8">H2</button>
+                </div>
+                <div class="col-span-4"></div>
+                <div class="">
+                <button class="btn px-8">H3</button>
+                </div>
+                <div class="col-span-1"></div>
+                <div class="">
+                <button class="btn px-8">H4</button>
+                </div>
+            </div>
+           <!-- Row 9 -->
+            <div class="grid grid-cols-12 px-10 my-4">
+                <div class="">
+                <p>I</p>
+                </div>
+                <div class="">
+                <button class="btn px-8">I1</button>
+                </div>
+                <div class="col-span-1"></div>
+                <div class="">
+                <button class="btn px-8">I2</button>
+                </div>
+                <div class="col-span-4"></div>
+                <div class="">
+                <button class="btn px-8">I3</button>
+                </div>
+                <div class="col-span-1"></div>
+                <div class="">
+                <button class="btn px-8">I4</button>
+                </div>
+            </div>
+           <!-- Row 10 -->
+         <div class="grid grid-cols-12 px-10 my-4">
+            <div class="">
+              <p>J</p>
+            </div>
+            <div class="">
+              <button class="btn px-8">J1</button>
+            </div>
+            <div class="col-span-1"></div>
+            <div class="">
+              <button class="btn px-8">J2</button>
+            </div>
+            <div class="col-span-4"></div>
+            <div class="">
+              <button class="btn px-8">J3</button>
+            </div>
+            <div class="col-span-1"></div>
+            <div class="">
+              <button class="btn px-8">J4</button>
+            </div>
+          </div>
+        </div>
+        <div class="w-[40%]">
+        
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
