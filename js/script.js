@@ -12,7 +12,7 @@ let sum = 0;
 
 
 for(const seat of seatBook){
-   
+   let clickOne = false;
     // Step-1
     seat.addEventListener('click', function(event){
    
@@ -23,10 +23,18 @@ for(const seat of seatBook){
             <h2 id="main-price">550</h2>
         </div>
     `
+        if(!clickOne){
+            clickOne = true;
+        }else{
+            alert('Do not do this');
+            return;
+            
+        }
         if(selectedSeat.childElementCount < 4){
             selectedSeat.innerHTML += option;
         }else{
-            alert('Maximum seat is selected')
+            alert('Maximum seat is selected');
+            return;
         }
     // step-2
     let mainPrice = document.getElementById('main-price');
@@ -46,6 +54,9 @@ for(const seat of seatBook){
         apply_input.removeAttribute("disabled");
         apply_btn.removeAttribute("disabled");
     }
+    // // Step-5
+   
+
     })
 
 }
