@@ -155,18 +155,20 @@
     <!-- Header Section End -->
 
     <main class="w-[95%] mx-auto">
-      <div class="text-center py-10">
-        <h2 class="font-bold text-5xl">Dublin Ticket Counter</h2>
-        <p class="">
-          Yes, you can run unit tests and view the results directly within the
-          app. The integrated testing features allow for a streamlined .
-        </p>
-      </div>
-      <section class="flex">
-        <div class="bg-red-300 w-[60%]">
+     <section class="py-8">
+        <div class="text-center py-10">
+            <h2 class="font-bold text-5xl">Dublin Ticket Counter</h2>
+            <p class="mt-3">
+              Yes, you can run unit tests and view the results directly within the
+              app. The integrated testing features allow for a streamlined .
+            </p>
+          </div>
+     </section>
+      <section class="flex mb-10">
+        <div class=" w-[60%]">
           <div class="max-w-[100%]">
-            <h2>Select Your Seat</h2>
-            <div class="flex justify-between border border-dashed">
+            <h2 class="pb-4">Select Your Seat</h2>
+            <div class="flex justify-between border border-dashed py-6 px-4">
               <div class="flex">
                 <img src="images/seat-gray.png" alt="" />
                 <span>Available</span>
@@ -401,10 +403,83 @@
             </div>
           </div>
         </div>
-        <div class="w-[40%]">
-        
+        <!-- Seat book input Section -->
+        <div class="input-section w-[40%] px-8">
+            <div class="mb-6">
+                <h2>Select Your Seat</h2>
+            </div>
+          <div class="space-y-6 bg-[#F7F8F8] p-3">
+            <div class="flex justify-between">
+                <div class="flex">
+                    <h2>Seat</h2>
+                    <span class="bg-[#1dd100] text-white w-4 h-4 rounded-full flex justify-center items-center">1</span>
+                </div>
+                <h2>class</h2>
+                <h2>prices</h2>
+            </div>
+            <div class="flex justify-between">
+                <h2 class="">A1</h2>
+                <h2>Economy</h2>
+                <h2>550</h2>
+            </div>
+            <div class="flex justify-between">
+                <h2 class="">A1</h2>
+                <h2>Economy</h2>
+                <h2>550</h2>
+            </div>
+            <div class="flex justify-between">
+                <h2>Total-price</h2>
+                <h2>BDT 1110</h2>
+            </div>
+            <div class="join w-full">
+                <input
+                  type="text"
+                  placeholder="Have Any Coupon"
+                  class="input input-bordered join-item w-full" />
+                <button class="btn bg-[#1dd100] text-white join-item">Apply</button>
+            </div>
+            <div class="flex justify-between">
+                <h2>Grand Total</h2>
+                <h2>BDT 910</h2>
+            </div>
+
+            <!-- Input Form -->
+
+            <div class="card bg-base-100 w-full shrink-0 shadow-2xl">
+                <div class="card-body">
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Passenger Name*</span>
+                    </label>
+                    <input type="text" placeholder="Enter Your Name" class="input input-bordered w-full" required />
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Phone Number*</span>
+                    </label>
+                    <input type="text" placeholder="Enter Your Phone Number" class="input input-bordered" required />
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Email Id*</span>
+                    </label>
+                    <input type="text" placeholder="Email Id" class="input input-bordered" required />
+                    <label class="label">
+                        <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                    </label>
+                  </div>
+                  <div class="form-control mt-6">
+                    <button class="btn btn-primary">Next</button>
+                  </div>
+                </div>
+              </div>
+
+
+
+          </div>
         </div>
       </section>
     </main>
   </body>
 </html>
+ 
