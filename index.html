@@ -165,7 +165,7 @@
           </div>
      </section>
       <section class="flex mb-10">
-        <div class=" w-[60%]">
+        <div id="" class="w-[60%] seat-selection">
           <div class="max-w-[100%]">
             <h2 class="pb-4">Select Your Seat</h2>
             <div class="flex justify-between border border-dashed py-6 px-4">
@@ -189,7 +189,7 @@
             <div class=""></div>
             <div class="col-span-1"></div>
             <div class="">
-              <button class="btn px-[22px]">Driver</button>
+              <button class="seat-btn btn px-[22px]">Driver</button>
             </div>
           </div>
           <!-- Row 1 -->
@@ -412,35 +412,29 @@
             <div class="flex justify-between">
                 <div class="flex">
                     <h2>Seat</h2>
-                    <span class="bg-[#1dd100] text-white w-4 h-4 rounded-full flex justify-center items-center">1</span>
+                    <span class="bg-[#1dd100] text-white w-4 h-4 rounded-full flex justify-center items-center" id="seat-number">0</span>
                 </div>
                 <h2>class</h2>
                 <h2>prices</h2>
             </div>
-            <div class="flex justify-between">
-                <h2 class="">A1</h2>
-                <h2>Economy</h2>
-                <h2>550</h2>
+            <div id="selected-option">
+              
             </div>
-            <div class="flex justify-between">
-                <h2 class="">A1</h2>
-                <h2>Economy</h2>
-                <h2>550</h2>
-            </div>
+            
             <div class="flex justify-between">
                 <h2>Total-price</h2>
-                <h2>BDT 1110</h2>
+                <h2>BDT <span id="total-price">***</span></h2>
             </div>
             <div class="join w-full">
                 <input
-                  type="text"
+                  type="text" id="applyInput"
                   placeholder="Have Any Coupon"
-                  class="input input-bordered join-item w-full" />
-                <button class="btn bg-[#1dd100] text-white join-item">Apply</button>
+                  class="input input-bordered join-item w-full" disabled/>
+                <button id="applyBtn" class="btn bg-[#1dd100] text-white join-item" disabled>Apply</button>
             </div>
             <div class="flex justify-between">
                 <h2>Grand Total</h2>
-                <h2>BDT 910</h2>
+                <h2>BDT <span id="grand-total">0</span></h2>
             </div>
 
             <!-- Input Form -->
@@ -469,17 +463,16 @@
                     </label>
                   </div>
                   <div class="form-control mt-6">
-                    <button class="btn btn-primary">Next</button>
+                    <button class="btn bg-[#1dd100]">Next</button>
                   </div>
                 </div>
               </div>
-
-
-
           </div>
         </div>
       </section>
     </main>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
  
