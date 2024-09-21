@@ -439,31 +439,44 @@
 
             <!-- Input Form -->
 
-            <div class="card bg-base-100 w-full shrink-0 shadow-2xl">
+            <div class="inputForm card bg-base-100 w-full shrink-0 shadow-2xl">
                 <div class="card-body">
                   <div class="form-control">
                     <label class="label">
                       <span class="label-text">Passenger Name*</span>
                     </label>
-                    <input type="text" placeholder="Enter Your Name" class="input input-bordered w-full" required />
+                    <input id="name-input" type="text" placeholder="Enter Your Name" class="input input-bordered w-full" required />
                   </div>
                   <div class="form-control">
                     <label class="label">
                       <span class="label-text">Phone Number*</span>
                     </label>
-                    <input type="text" placeholder="Enter Your Phone Number" class="input input-bordered" required />
+                    <input id="phone-input" type="text" placeholder="Enter Your Phone Number" class="input input-bordered" required />
                   </div>
                   <div class="form-control">
                     <label class="label">
                       <span class="label-text">Email Id*</span>
                     </label>
-                    <input type="text" placeholder="Email Id" class="input input-bordered" required />
+                    <input id="email-input" type="text" placeholder="Email Id" class="input input-bordered" required />
                     <label class="label">
                         <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
                     </label>
                   </div>
                   <div class="form-control mt-6">
-                    <button class="btn bg-[#1dd100]">Next</button>
+                    <button id="next-btn" class="btn bg-[#1dd100]" onclick="my_modal_1.showModal()" disabled>Next</button>
+                    <dialog id="my_modal_1" class="modal">
+                      <div class="modal-box">
+                        <h3 class="text-lg font-bold">Hello!</h3>
+                        <p class="py-4">Press ESC key or click the button below to close</p>
+                        <div class="modal-action">
+                          <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn">Close</button>
+                          </form>
+                        </div>
+                      </div>
+                    </dialog>
+                    
                   </div>
                 </div>
               </div>
