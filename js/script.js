@@ -8,6 +8,7 @@ const nextBtn = document.getElementById('next-btn');
 const nameInput = document.getElementById('name-input')
 const emailInput = document.getElementById('email-input')
 const phoneInput = document.getElementById('phone-input')
+const inputForms = document.querySelectorAll('.inputForm input');
 let sum = 0;
 
 
@@ -28,7 +29,6 @@ for(const seat of seatBook){
         }else{
             alert('Do not do this');
             return;
-            
         }
         if(selectedSeat.childElementCount < 4){
             selectedSeat.innerHTML += option;
@@ -73,22 +73,41 @@ apply_btn.addEventListener('click', function(){
 
 
 
-phoneInput.addEventListener('keyup', function(event){
-    if(event.target.value.length !== 11){
-        nextBtn.setAttribute("disabled", true);
-    }else{
+// phoneInput.addEventListener('keyup', function(event){
+    // if(event.target.value.length !== 11){
+    //     nextBtn.setAttribute("disabled", true);
+    // }else{
+    //     nextBtn.removeAttribute("disabled");
+    // }
+// });
+
+// for(let inputForm of inputForms){
+//     inputForm.addEventListener('keyup', function(event){
+      
+//       if(inputForm.value.length === 3){
+//         console.log(inputForm.value)
+//       }
+//     })
+// }
+
+
+
+
+
+function inputValidation(){
+    if(nameInput.value.length > 4 && phoneInput.value.length > 11 && emailInput.value.length > 6){
         nextBtn.removeAttribute("disabled");
+       
+    }else{
+        nextBtn.setAttribute("disabled", true);
     }
-});
+    
+}
 
 
-
-
-
-
-
-
-
+nameInput.addEventListener('input', inputValidation);
+emailInput.addEventListener('input', inputValidation);
+phoneInput.addEventListener('input', inputValidation);
 
 
 
